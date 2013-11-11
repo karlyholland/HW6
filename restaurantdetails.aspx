@@ -1,16 +1,8 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="restaurantdetails.aspx.vb" Inherits="detailsview" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="_default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
-<body>
-    <div id="wrapper">
-    <form id="form1" runat="server">
-    <div></div>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
         <asp:SqlDataSource ID="detailsDataSource" runat="server" 
             ConnectionString="<%$ ConnectionStrings:cs_BurgersWebsite %>" 
@@ -41,19 +33,6 @@
                 <asp:Parameter Name="burgerID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <div>
-         <img src="./images/header.png" alt="Iowa City Burgers" width:"750px"; />
-        </div>
-        <div id="container">
-
-            <div id="menu">
-                <ul id="navlist">
-                    <li><a href="./default.aspx">Home</a></li>
-                    <li><a href="./aboutus.aspx">About Us</a></li>
-                    <li><a href="./contactus.aspx">Contact</a></li>
-                </ul>
-                <br />
-        <div id="content">
         
             <asp:DetailsView ID="DetailsView1" runat="server" 
             AutoGenerateRows="False" DataKeyNames="burgerID" DataSourceID="detailsDataSource" 
@@ -70,16 +49,5 @@
             </Fields>
         </asp:DetailsView>
             <br />
-    </div>
 
-            <div id="footer">
-                <br />
-                &copy;
-                <asp:Label ID="lblCopy" runat="server" Text=""></asp:Label>
-                6K:183 Software Design &amp; Development</div>
-        </div>
-    </div>
-    </form>
-    </div>
-</body>
-</html>
+</asp:Content>

@@ -1,36 +1,15 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="gridview" %>
-<!DOCTYPE html>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="_default" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
-<body>
-    <div id="wrapper">
-    <form id="form1" runat="server">
-    <div>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"
             ConnectionString="<%$ ConnectionStrings:cs_BurgersWebsite %>"
             SelectCommand="SELECT * FROM [Burger]">
 
         </asp:SqlDataSource>
         </div>
-
-        <div>
-         <img src="./images/header.png" alt="Iowa City Burgers" width:"750px";>
-        </div>
-        <div id="container">       
-            <div id="menu">
-                <ul id="navlist">
-                    <li><a href="./default.aspx">Home</a></li>
-                    <li><a href="./aboutus.aspx">About Us</a></li>
-                    <li><a href="./contactus.aspx">Contact</a></li>
-                </ul>
-            <br /><br />
-
-
-        <div id="content">
 
             <br />
             <asp:Label ID="Label1" runat="server" Text="Search:"></asp:Label>
@@ -48,16 +27,5 @@
             </Columns>
         </asp:GridView>
             <br />
-        </div>
 
-            <div id="footer">
-                <br />
-                &copy;
-                <asp:Label ID="lblCopy" runat="server" Text=""></asp:Label>
-                6K:183 Software Design &amp; Development</div>
-        </div>
-    </div>
-    </form>
-    </div>
-</body>
-</html>
+    </asp:Content>

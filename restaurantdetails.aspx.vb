@@ -16,6 +16,7 @@ Partial Class detailsview
     '    'Response.Write("This recipe has been deleted.")
 
     'End Sub
+
     Protected Sub DetailsView1_ItemInserted(sender As Object, e As DetailsViewInsertedEventArgs) Handles DetailsView1.ItemInserted
 
         Response.Redirect("./default.aspx")
