@@ -7,6 +7,8 @@ h2 {font-size:25px; font-family:Tahoma,Georgia;background:tan;}
 .deletedrecipeshighlight {color: #F08080; font-style:italic; font-weight:bold;
                           text-decoration:underline;}
 
+.menuImg {
+
 /*center div*/
 #wrapper { margin:auto; width:800px; text-align: left; }
 
