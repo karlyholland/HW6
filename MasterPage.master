@@ -16,9 +16,10 @@
     <div id ="wrapper">
     <form id="form1" runat="server">
 
-    <div><img src="./images/header.png" alt="Iowa City Burgers" width:"750px";><br />
+    <div><img src="./images/header.png" alt="Iowa City Burgers" width:"750px"; /><br />
         </div>
     <div id="container"><div id="menu"><ul id="navlist">
+
                     <li>
                         <asp:Image ID="imgBurger1" runat="server" Height="25px" ImageUrl="~/Images/burger.png" />
                         &nbsp;&nbsp;&nbsp;
