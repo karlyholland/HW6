@@ -1,0 +1,35 @@
+﻿body {background:tan;font-family:Arial,Georgia;}
+
+h1 {font-family:Arial,Georgia;background:tan;}
+
+h2 {font-size:25px; font-family:Arial,Georgia;background:tan;}
+
+.deletedrecipeshighlight {color: #F08080; font-style:italic; font-weight:bold;
+                          text-decoration:underline;}
+
+/*center div*/
+#wrapper { margin:auto; width:600px; text-align: left; }
+
+#container {background: tan; width: 750px; /*margin: 0 auto;*/ text-align: center;
+            /*border: solid 2px coral;*/}
+
+#menu {background: coral; color:silver; text-align:center; font-family:Arial,Georgia; text-decoration:none;}
+
+#content {background: silver; padding-left:40px; clear: both; text-align:left; color:black;
+          font-family:Arial,Georgia;}
+
+#footer {background: coral; text-align:center;font-family:Arial,Georgia; color:white;}
+
+#button {text-align:center; padding:20px;}
+
+/*menu list*/
+#navlist {list-style: none;/*padding: 0;margin: 0;*/font-family:Arial,Georgia;}
+    #navlist li {display: inline;padding: 0;margin: 0;}
+    #navlist li:before {content: "| ";}
+    #navlist li:first-child:before {content: "";}
+
+    /*browser probs*/
+    * html #navlist li {border-left:1px solid black;padding:0 0.4em; margin:0 0.4em 0 -0.4em;}
+    * html #navlist {height:1%;}
+    * html #navlist li {display:block;float:left;}
+    * html #navlist li:first-child{border-left:0;}
