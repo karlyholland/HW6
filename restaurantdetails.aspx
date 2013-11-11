@@ -13,50 +13,42 @@
     <div></div>
     
         <asp:SqlDataSource ID="detailsDataSource" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:csRecipes %>" 
-            SelectCommand="SELECT * FROM [Recipe] WHERE ([recipeID] = @recipeID)" 
-            DeleteCommand="DELETE FROM [Recipe] WHERE [recipeID] = @recipeID" 
-            InsertCommand="INSERT INTO [Recipe] ([recipeName], [submittedBy], [ingredient1], [ingredient2], [ingredient3], [ingredient4], [ingredient5], [prep], [notes]) VALUES (@recipeName, @submittedBy, @ingredient1, @ingredient2, @ingredient3, @ingredient4, @ingredient5, @prep, @notes)" 
-            UpdateCommand="UPDATE [Recipe] SET [recipeName] = @recipeName, [submittedBy] = @submittedBy, [ingredient1] = @ingredient1, [ingredient2] = @ingredient2, [ingredient3] = @ingredient3, [ingredient4] = @ingredient4, [ingredient5] = @ingredient5, [prep] = @prep, [notes] = @notes WHERE [recipeID] = @recipeID">
+            ConnectionString="<%$ ConnectionStrings:cs_BurgersWebsite %>" 
+            SelectCommand="SELECT * FROM [Burger] WHERE ([burgerID] = @burgerID)"
+            DeleteCommand="DELETE FROM [Burger] WHERE [burgerID] = @burgerID"
+            InsertCommand="INSERT INTO [Burger] ([resName], [address], [cost], [details], [phone]) VALUES (@resName, @address, @cost, @details, @phone)"
+            UpdateCommand="UPDATE [Burger] SET [resName] = @resName, [address] = @address, [cost] = @cost, [details] = @details, [phone] = @phone WHERE [burgerID] = @burgerID">
+         
             <DeleteParameters>
-                <asp:Parameter Name="recipeID" Type="Int32" />
+                <asp:Parameter Name="burgerID" Type="Int32" />
             </DeleteParameters>
             <InsertParameters>
-                <asp:Parameter Name="recipeName" Type="String" />
-                <asp:Parameter Name="submittedBy" Type="String" />
-                <asp:Parameter Name="ingredient1" Type="String" />
-                <asp:Parameter Name="ingredient2" Type="String" />
-                <asp:Parameter Name="ingredient3" Type="String" />
-                <asp:Parameter Name="ingredient4" Type="String" />
-                <asp:Parameter Name="ingredient5" Type="String" />
-                <asp:Parameter Name="prep" Type="String" />
-                <asp:Parameter Name="notes" Type="String" />
+                <asp:Parameter Name="resName" Type="String" />
+                <asp:Parameter Name="address" Type="String" />
+                <asp:Parameter Name="cost" Type="String" />
+                <asp:Parameter Name="details" Type="String" />
+                <asp:Parameter Name="phone" Type="String" />
             </InsertParameters>
             <SelectParameters>
-                <asp:QueryStringParameter Name="recipeID" QueryStringField="recipeID" Type="Int32" />
+                <asp:QueryStringParameter Name="burgerID" QueryStringField="burgerID" Type="Int32" />
             </SelectParameters>
             <UpdateParameters>
-                <asp:Parameter Name="recipeName" Type="String" />
-                <asp:Parameter Name="submittedBy" Type="String" />
-                <asp:Parameter Name="ingredient1" Type="String" />
-                <asp:Parameter Name="ingredient2" Type="String" />
-                <asp:Parameter Name="ingredient3" Type="String" />
-                <asp:Parameter Name="ingredient4" Type="String" />
-                <asp:Parameter Name="ingredient5" Type="String" />
-                <asp:Parameter Name="prep" Type="String" />
-                <asp:Parameter Name="notes" Type="String" />
-                <asp:Parameter Name="recipeID" Type="Int32" />
+                <asp:Parameter Name="resName" Type="String" />
+                <asp:Parameter Name="address" Type="String" />
+                <asp:Parameter Name="cost" Type="String" />
+                <asp:Parameter Name="details" Type="String" />
+                <asp:Parameter Name="phone" Type="String" />
+                <asp:Parameter Name="burgerID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
         <div>
-         <img src="./images/header.png" alt="Wicked Easy Recipes - Using 5 Ingredients or Less!" width:"750px"; />
+         <img src="./images/header.png" alt="Iowa City Burgers" width:"750px"; />
         </div>
         <div id="container">
 
             <div id="menu">
                 <ul id="navlist">
                     <li><a href="./default.aspx">Home</a></li>
-                    <li><a href="newrecipe.aspx">New Recipe</a></li>
                     <li><a href="./aboutus.aspx">About Us</a></li>
                     <li><a href="./contactus.aspx">Contact</a></li>
                 </ul>
@@ -64,20 +56,16 @@
         <div id="content">
         
             <asp:DetailsView ID="DetailsView1" runat="server" 
-            AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="detailsDataSource" 
+            AutoGenerateRows="False" DataKeyNames="burgerID" DataSourceID="detailsDataSource" 
             Height="450px" Width="700px">
             <Fields>
-                <asp:BoundField DataField="recipeName" HeaderText="Recipe Name" SortExpression="recipeName" />
-                <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
-                <asp:BoundField DataField="ingredient1" HeaderText="Ingredient 1" SortExpression="ingredient1" />
-                <asp:BoundField DataField="ingredient2" HeaderText="Ingredient 2" SortExpression="ingredient2" />
-                <asp:BoundField DataField="ingredient3" HeaderText="Ingredient 3" SortExpression="ingredient3" />
-                <asp:BoundField DataField="ingredient4" HeaderText="Ingredient 4" SortExpression="ingredient4" />
-                <asp:BoundField DataField="ingredient5" HeaderText="Ingredient 5" SortExpression="ingredient5" />
-                <asp:BoundField DataField="prep" HeaderText="Preparation" SortExpression="prep" />
-                <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
+                <asp:BoundField DataField="resName" HeaderText="Restaurant Name" SortExpression="resName" />
+                <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address" />
+                <asp:BoundField DataField="phone" HeaderText="Phone Number" SortExpression="phone" />
+                <asp:BoundField DataField="cost" HeaderText="Burger Cost" />
+                <asp:BoundField DataField="details" HeaderText="Burger Details" />
           
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button"/>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" ButtonType="Button"/>
           
             </Fields>
         </asp:DetailsView>

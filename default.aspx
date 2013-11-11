@@ -11,11 +11,15 @@
     <div id="wrapper">
     <form id="form1" runat="server">
     <div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_BurgersWebsite %>" SelectCommand="SELECT * FROM [Burger]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server"
+            ConnectionString="<%$ ConnectionStrings:cs_BurgersWebsite %>"
+            SelectCommand="SELECT * FROM [Burger]">
+
+        </asp:SqlDataSource>
         </div>
 
         <div>
-         <img src="./images/header.png" alt="Wicked Easy Recipes - Using 5 Ingredients or Less!" width:"750px";>
+         <img src="./images/header.png" alt="Iowa City Burgers" width:"750px";>
         </div>
         <div id="container">       
             <div id="menu">
@@ -33,10 +37,10 @@
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True"
             AutoGenerateColumns="False" DataKeyNames="burgerID" DataSourceID="SqlDataSource1" Width="700px">
             <Columns>
-                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="resName" HeaderText="Restaurant" SortExpression="resName" />
                 <asp:BoundField DataField="cost" HeaderText="Burger Cost" SortExpression="cost" />
                 <asp:BoundField DataField="details" HeaderText="Burger Details" SortExpression="details" />
+                <asp:HyperLinkField DataNavigateUrlFields="burgerID" DataNavigateUrlFormatString="restaurantdetails.aspx?burgerID={0}" Text="Restaurant Details" />
             </Columns>
         </asp:GridView>
         </div>

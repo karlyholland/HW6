@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div></div>
     <div>
-         <img src="./images/header.png" alt="Wicked Easy Recipes - Using 5 Ingredients or Less!" width:"750px"; />
+         <img src="./images/header.png" alt="Iowa City Burgers" width:"750px"; />
         </div>
         <div id="container">
 

@@ -10,7 +10,7 @@ h2 {font-size:25px; font-family:Tahoma,Georgia;background:tan;}
 /*center div*/
 #wrapper { margin:auto; width:800px; text-align: left; }
 
-#container {background: black; width: 750px; /*margin: 0 auto;*/ text-align: center;
+#container {background: black; width: 742px; /*margin: 0 auto;*/ text-align: center;
             /*border: solid 2px coral;*/}
 
 #menu {background: silver; color:silver; text-align:center; font-family:Tahoma,Georgia; text-decoration:none;}

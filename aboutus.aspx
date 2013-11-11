@@ -12,20 +12,20 @@
     <form id="form1" runat="server">
     <div></div>
     <div>
-         <img src="./images/header.png" alt="Wicked Easy Recipes - Using 5 Ingredients or Less!" width:"750px"; />
+         <img src="./images/header.png" alt="Iowa City Burgers" width:"750px"; />
         </div>
         <div id="container">
 
             <div id="menu">
+                
                 <ul id="navlist">
+                    <li>
+                    <li>
                     <li><a href="./default.aspx">Home</a></li>
                     <%--<li><a href="newrecipe.aspx">New Recipe</a></li>--%>
                     <li><a href="./aboutus.aspx">About Us</a></li>
                     <li><a href="./contactus.aspx">Contact</a></li>
                 </ul>
-                
-                <p>
-                    &nbsp;</p>
                 
     <div id="content">
 <br />
