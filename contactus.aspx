@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="newrecipe.aspx.vb" Inherits="detailsview" %>
+﻿<%--<%@ Page Language="VB" AutoEventWireup="false" CodeFile="newrecipe.aspx.vb" Inherits="detailsview" %>--%>
 
 <!DOCTYPE html>
 
@@ -19,7 +19,7 @@
             <div id="menu">
                 <ul id="navlist">
                     <li><a href="./default.aspx">Home</a></li>
-                    <li><a href="newrecipe.aspx">New Recipe</a></li>
+                    <%--<li><a href="newrecipe.aspx">New Recipe</a></li>--%>
                     <li><a href="./aboutus.aspx">About Us</a></li>
                     <li><a href="./contactus.aspx">Contact</a></li>
                 </ul>

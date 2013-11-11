@@ -1,29 +1,29 @@
-﻿body {background:tan;font-family:Arial,Georgia;}
+﻿body {background:black;font-family:Tahoma,Georgia;}
 
-h1 {font-family:Arial,Georgia;background:tan;}
+h1 {font-family:Tahoma,Georgia;background:black;}
 
-h2 {font-size:25px; font-family:Arial,Georgia;background:tan;}
+h2 {font-size:25px; font-family:Tahoma,Georgia;background:tan;}
 
 .deletedrecipeshighlight {color: #F08080; font-style:italic; font-weight:bold;
                           text-decoration:underline;}
 
 /*center div*/
-#wrapper { margin:auto; width:600px; text-align: left; }
+#wrapper { margin:auto; width:800px; text-align: left; }
 
-#container {background: tan; width: 750px; /*margin: 0 auto;*/ text-align: center;
+#container {background: black; width: 750px; /*margin: 0 auto;*/ text-align: center;
             /*border: solid 2px coral;*/}
 
-#menu {background: coral; color:silver; text-align:center; font-family:Arial,Georgia; text-decoration:none;}
+#menu {background: silver; color:silver; text-align:center; font-family:Tahoma,Georgia; text-decoration:none;}
 
-#content {background: silver; padding-left:40px; clear: both; text-align:left; color:black;
-          font-family:Arial,Georgia;}
+#content {background: yellow; padding-left:30px; clear: both; text-align:left; color:black;
+          font-family:Tahoma,Georgia;}
 
-#footer {background: coral; text-align:center;font-family:Arial,Georgia; color:white;}
+#footer {background: silver; text-align:center;font-family:Tahoma,Georgia; color:black;}
 
 #button {text-align:center; padding:20px;}
 
 /*menu list*/
-#navlist {list-style: none;/*padding: 0;margin: 0;*/font-family:Arial,Georgia;}
+#navlist {list-style: none;/*padding: 0;margin: 0;*/font-family:Tahoma,Georgia;}
     #navlist li {display: inline;padding: 0;margin: 0;}
     #navlist li:before {content: "| ";}
     #navlist li:first-child:before {content: "";}
