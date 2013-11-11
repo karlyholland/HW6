@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="gridview" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,7 +24,6 @@
             <div id="menu">
                 <ul id="navlist">
                     <li><a href="./default.aspx">Home</a></li>
-                    <%--<li><a href="newrecipe.aspx">New Recipe</a></li>--%>
                     <li><a href="./aboutus.aspx">About Us</a></li>
                     <li><a href="./contactus.aspx">Contact</a></li>
                 </ul>
@@ -33,6 +31,12 @@
 
 
         <div id="content">
+
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Search:"></asp:Label>
+&nbsp;<asp:TextBox ID="tbSearch" runat="server"></asp:TextBox>
+            <br />
+            <br />
 
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True"
             AutoGenerateColumns="False" DataKeyNames="burgerID" DataSourceID="SqlDataSource1" Width="700px">
@@ -43,6 +47,7 @@
                 <asp:HyperLinkField DataNavigateUrlFields="burgerID" DataNavigateUrlFormatString="restaurantdetails.aspx?burgerID={0}" Text="Restaurant Details" />
             </Columns>
         </asp:GridView>
+            <br />
         </div>
 
             <div id="footer">
